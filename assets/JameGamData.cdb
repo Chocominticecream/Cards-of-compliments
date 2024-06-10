@@ -16,7 +16,7 @@
 			],
 			"lines": [
 				{
-					"writtenText": "how big and shiny your wrench looks!",
+					"writtenText": "p",
 					"word": [
 						{
 							"words": "wrench"
@@ -346,10 +346,26 @@
 							"words": "clog"
 						}
 					]
+				},
+				{
+					"writtenText": "you are as brave as mario!",
+					"word": [
+						{
+							"words": "mario"
+						}
+					]
+				},
+				{
+					"writtenText": "you are as charming as luigi!",
+					"word": [
+						{
+							"words": "luigi"
+						}
+					]
 				}
 			],
 			"separators": [
-				31
+				33
 			],
 			"props": {}
 		},
