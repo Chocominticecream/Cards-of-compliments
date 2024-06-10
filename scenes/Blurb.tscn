@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr8lih1724w2t"]
+
+[ext_resource type="FontFile" uid="uid://drpqbxo0lqgrc" path="res://assets/font/LapsusPro-Bold.otf" id="1_pprqt"]
+[ext_resource type="Script" path="res://scenes/Blurb.gd" id="2_wj8do"]
+
+[sub_resource type="Animation" id="Animation_g6lqe"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ocj54"]
+_data = {
+"fade": SubResource("Animation_g6lqe")
+}
+
+[node name="Blurb" type="RichTextLabel"]
+offset_right = 1000.0
+offset_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+theme_override_fonts/normal_font = ExtResource("1_pprqt")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "test"
+script = ExtResource("2_wj8do")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ocj54")
+}

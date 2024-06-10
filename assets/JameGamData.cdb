@@ -1,0 +1,1059 @@
+{
+	"sheets": [
+		{
+			"name": "plumber",
+			"columns": [
+				{
+					"typeStr": "1",
+					"name": "writtenText",
+					"display": null
+				},
+				{
+					"typeStr": "8",
+					"name": "word",
+					"display": null
+				}
+			],
+			"lines": [
+				{
+					"writtenText": "how big and shiny your wrench looks!",
+					"word": [
+						{
+							"words": "wrench"
+						},
+						{
+							"words": "wrenches"
+						}
+					]
+				},
+				{
+					"writtenText": "how you fixed my pipes!",
+					"word": [
+						{
+							"words": "pipe"
+						},
+						{
+							"words": "pipes"
+						},
+						{
+							"words": "piping"
+						}
+					]
+				},
+				{
+					"writtenText": "your drainage system is really good looking!",
+					"word": [
+						{
+							"words": "drain"
+						},
+						{
+							"words": "drainage"
+						}
+					]
+				},
+				{
+					"writtenText": "that you really go ham on those leaks!",
+					"word": [
+						{
+							"words": "leak"
+						},
+						{
+							"words": "leakage"
+						},
+						{
+							"words": "leaks"
+						}
+					]
+				},
+				{
+					"writtenText": "your plunger is really long!",
+					"word": [
+						{
+							"words": "plunger"
+						},
+						{
+							"words": "plungers"
+						}
+					]
+				},
+				{
+					"writtenText": "how you went down on those sewers!",
+					"word": [
+						{
+							"words": "sewer"
+						},
+						{
+							"words": "sewers"
+						},
+						{
+							"words": "sewage"
+						}
+					]
+				},
+				{
+					"writtenText": "you really fixed my faucet!",
+					"word": [
+						{
+							"words": "faucet"
+						},
+						{
+							"words": "faucets"
+						},
+						{
+							"words": "spigot"
+						}
+					]
+				},
+				{
+					"writtenText": "I think you are just great being you!",
+					"word": [
+						{
+							"words": "plumber"
+						},
+						{
+							"words": "plumbing"
+						},
+						{
+							"words": "plumb"
+						}
+					]
+				},
+				{
+					"writtenText": "that you are really good with your tools!",
+					"word": [
+						{
+							"words": "tool"
+						},
+						{
+							"words": "tools"
+						},
+						{
+							"words": "toolkit"
+						}
+					]
+				},
+				{
+					"writtenText": "that those overalls look good on you!",
+					"word": [
+						{
+							"words": "pants"
+						},
+						{
+							"words": "overalls"
+						}
+					]
+				},
+				{
+					"writtenText": "that you really know how to use a hammer!",
+					"word": [
+						{
+							"words": "hammer"
+						},
+						{
+							"words": "hammers"
+						},
+						{
+							"words": "hammering"
+						}
+					]
+				},
+				{
+					"writtenText": "that you have excellent tubing!",
+					"word": [
+						{
+							"words": "tubing"
+						},
+						{
+							"words": "tubes"
+						}
+					]
+				},
+				{
+					"writtenText": "how you used the hose!",
+					"word": [
+						{
+							"words": "hose"
+						},
+						{
+							"words": "hosing"
+						},
+						{
+							"words": "hoses"
+						}
+					]
+				},
+				{
+					"writtenText": "that you look like markiplier!",
+					"word": [
+						{
+							"words": "pliers"
+						},
+						{
+							"words": "plier"
+						}
+					]
+				},
+				{
+					"writtenText": "that you really know how to work a hacksaw!",
+					"word": [
+						{
+							"words": "hacksaw"
+						},
+						{
+							"words": "hacksaws"
+						}
+					]
+				},
+				{
+					"writtenText": "that you know your way around a screwdriver!",
+					"word": [
+						{
+							"words": "screwdriver"
+						},
+						{
+							"words": "screwdrivers"
+						}
+					]
+				},
+				{
+					"writtenText": "that you know your way around tape!",
+					"word": [
+						{
+							"words": "tape"
+						},
+						{
+							"words": "taping"
+						}
+					]
+				},
+				{
+					"writtenText": "you have a really cool hat!",
+					"word": [
+						{
+							"words": "hat"
+						}
+					]
+				},
+				{
+					"writtenText": "you fixed my toilet!",
+					"word": [
+						{
+							"words": "toilet"
+						},
+						{
+							"words": "toilets"
+						}
+					]
+				},
+				{
+					"writtenText": "that you really know how to operate some valves!",
+					"word": [
+						{
+							"words": "valve"
+						},
+						{
+							"words": "valves"
+						}
+					]
+				},
+				{
+					"writtenText": "your soldering skills!",
+					"word": [
+						{
+							"words": "solder"
+						},
+						{
+							"words": "soldering"
+						}
+					]
+				},
+				{
+					"writtenText": "you know a lot about PVC!",
+					"word": [
+						{
+							"words": "pvc"
+						}
+					]
+				},
+				{
+					"writtenText": "you know a lot about copper!",
+					"word": [
+						{
+							"words": "copper"
+						}
+					]
+				},
+				{
+					"writtenText": "you know how to fit coupling!",
+					"word": [
+						{
+							"words": "coupling"
+						}
+					]
+				},
+				{
+					"writtenText": "you fixed my water main!",
+					"word": [
+						{
+							"words": "water"
+						}
+					]
+				},
+				{
+					"writtenText": "you cleaned my septic tank!",
+					"word": [
+						{
+							"words": "tank"
+						}
+					]
+				},
+				{
+					"writtenText": "you know how to really use sealant!",
+					"word": [
+						{
+							"words": "sealant"
+						}
+					]
+				},
+				{
+					"writtenText": "you fixed my pump!",
+					"word": [
+						{
+							"words": "pump"
+						}
+					]
+				},
+				{
+					"writtenText": "you vented!",
+					"word": [
+						{
+							"words": "vent"
+						}
+					]
+				},
+				{
+					"writtenText": "you fixed my sink!",
+					"word": [
+						{
+							"words": "sink"
+						}
+					]
+				},
+				{
+					"writtenText": "you unclogged my pipes!",
+					"word": [
+						{
+							"words": "clog"
+						}
+					]
+				}
+			],
+			"separators": [
+				31
+			],
+			"props": {}
+		},
+		{
+			"name": "plumber@word",
+			"props": {
+				"hide": true
+			},
+			"separators": [],
+			"lines": [],
+			"columns": [
+				{
+					"typeStr": "1",
+					"name": "words",
+					"display": null
+				}
+			]
+		},
+		{
+			"name": "chef",
+			"columns": [
+				{
+					"typeStr": "1",
+					"name": "writtenText"
+				},
+				{
+					"typeStr": "8",
+					"name": "word"
+				}
+			],
+			"lines": [
+				{
+					"writtenText": "how you cook in general!",
+					"word": [
+						{
+							"words": "cook"
+						},
+						{
+							"words": "cooking"
+						},
+						{
+							"words": "cooks"
+						}
+					]
+				},
+				{
+					"writtenText": "that you know many recipes for fruit desserts!",
+					"word": [
+						{
+							"words": "fruit"
+						},
+						{
+							"words": "fruits"
+						}
+					]
+				},
+				{
+					"writtenText": "that your pan looks so shiny and clean!",
+					"word": [
+						{
+							"words": "pan"
+						},
+						{
+							"words": "saucepan"
+						},
+						{
+							"words": "pans"
+						},
+						{
+							"words": "skillet"
+						}
+					]
+				},
+				{
+					"writtenText": "that you cook many things in your pot!",
+					"word": [
+						{
+							"words": "pot"
+						},
+						{
+							"words": "cooker"
+						},
+						{
+							"words": "pressure cooker"
+						},
+						{
+							"words": "pots"
+						},
+						{
+							"words": "crockpot"
+						}
+					]
+				},
+				{
+					"writtenText": "your skill in using a spatula!",
+					"word": [
+						{
+							"words": "spatula"
+						},
+						{
+							"words": "spatulas"
+						}
+					]
+				},
+				{
+					"writtenText": "how you ladle soup!",
+					"word": [
+						{
+							"words": "ladle"
+						},
+						{
+							"words": "ladles"
+						}
+					]
+				},
+				{
+					"writtenText": "how you can use a spoon for so many things!",
+					"word": [
+						{
+							"words": "spoon"
+						},
+						{
+							"words": "spoons"
+						}
+					]
+				},
+				{
+					"writtenText": "how you jab food with a fork!",
+					"word": [
+						{
+							"words": "fork"
+						},
+						{
+							"words": "forks"
+						}
+					]
+				},
+				{
+					"writtenText": "the presentation of your food on your plates!",
+					"word": [
+						{
+							"words": "plate"
+						},
+						{
+							"words": "plating"
+						},
+						{
+							"words": "plates"
+						}
+					]
+				},
+				{
+					"writtenText": "how you know to select the best flour!",
+					"word": [
+						{
+							"words": "flour"
+						}
+					]
+				},
+				{
+					"writtenText": "your perfect rice cooking!",
+					"word": [
+						{
+							"words": "rice"
+						}
+					]
+				},
+				{
+					"writtenText": "how you know many ways to cook eggs!",
+					"word": [
+						{
+							"words": "egg"
+						},
+						{
+							"words": "eggs"
+						}
+					]
+				},
+				{
+					"writtenText": "that you know how important veggies are!",
+					"word": [
+						{
+							"words": "vegetables"
+						},
+						{
+							"words": "veggies"
+						},
+						{
+							"words": "veg"
+						}
+					]
+				},
+				{
+					"writtenText": "that you know how to use a mixer!",
+					"word": [
+						{
+							"words": "mixer"
+						}
+					]
+				},
+				{
+					"writtenText": "your beating skills are second to none!",
+					"word": [
+						{
+							"words": "beater"
+						},
+						{
+							"words": "beating"
+						}
+					]
+				},
+				{
+					"writtenText": "you really know how to make a good sandwich!",
+					"word": [
+						{
+							"words": "sandwich"
+						},
+						{
+							"words": "sandwiches"
+						}
+					]
+				},
+				{
+					"writtenText": "you have a really cool hat!",
+					"word": [
+						{
+							"words": "hat"
+						},
+						{
+							"words": "hats"
+						},
+						{
+							"words": "toque"
+						}
+					]
+				},
+				{
+					"writtenText": "you bake really good pie!",
+					"word": [
+						{
+							"words": "pie"
+						},
+						{
+							"words": "pies"
+						}
+					]
+				},
+				{
+					"writtenText": "you make really good food!",
+					"word": [
+						{
+							"words": "cuisine"
+						},
+						{
+							"words": "food"
+						},
+						{
+							"words": "gourmet"
+						},
+						{
+							"words": "dish"
+						}
+					]
+				},
+				{
+					"writtenText": "you know how to saute a good meal!",
+					"word": [
+						{
+							"words": "saute"
+						}
+					]
+				},
+				{
+					"writtenText": "you know how to bake so many kinds of food!",
+					"word": [
+						{
+							"words": "bake"
+						},
+						{
+							"words": "baking"
+						}
+					]
+				},
+				{
+					"writtenText": "you grill hamburgers really well!",
+					"word": [
+						{
+							"words": "grill"
+						},
+						{
+							"words": "grilled"
+						},
+						{
+							"words": "grilling"
+						}
+					]
+				},
+				{
+					"writtenText": "your pastries are divine!",
+					"word": [
+						{
+							"words": "pastry"
+						},
+						{
+							"words": "pastries"
+						}
+					]
+				},
+				{
+					"writtenText": "your apron looks really good on you!",
+					"word": [
+						{
+							"words": "apron"
+						},
+						{
+							"words": "aprons"
+						}
+					]
+				},
+				{
+					"writtenText": "your chopping skills are stellar!",
+					"word": [
+						{
+							"words": "chop"
+						},
+						{
+							"words": "chopping"
+						},
+						{
+							"words": "chopped"
+						}
+					]
+				},
+				{
+					"writtenText": "you dice food really well!",
+					"word": [
+						{
+							"words": "dice"
+						},
+						{
+							"words": "dicing"
+						}
+					]
+				},
+				{
+					"writtenText": "you blend a mean milkshake!",
+					"word": [
+						{
+							"words": "blend"
+						},
+						{
+							"words": "blending"
+						},
+						{
+							"words": "blender"
+						}
+					]
+				},
+				{
+					"writtenText": "you can perform a mean simmer!",
+					"word": [
+						{
+							"words": "simmer"
+						},
+						{
+							"words": "simmering"
+						}
+					]
+				},
+				{
+					"writtenText": "you can roast meats really well!",
+					"word": [
+						{
+							"words": "roast"
+						},
+						{
+							"words": "roasting"
+						}
+					]
+				},
+				{
+					"writtenText": "you broil stuff really good!",
+					"word": [
+						{
+							"words": "broil"
+						},
+						{
+							"words": "broiling"
+						}
+					]
+				},
+				{
+					"writtenText": "you can boil down a good hard boiled egg!",
+					"word": [
+						{
+							"words": "boil"
+						},
+						{
+							"words": "boiling"
+						}
+					]
+				},
+				{
+					"writtenText": "how you prepare really tasty food!",
+					"word": [
+						{
+							"words": "prep"
+						},
+						{
+							"words": "prepare"
+						}
+					]
+				},
+				{
+					"writtenText": "your garnishing is out of this world!",
+					"word": [
+						{
+							"words": "garnish"
+						},
+						{
+							"words": "garnishing"
+						}
+					]
+				},
+				{
+					"writtenText": "how you deglaze!",
+					"word": [
+						{
+							"words": "deglaze"
+						},
+						{
+							"words": "deglazing"
+						}
+					]
+				},
+				{
+					"writtenText": "how you steam a good ham!",
+					"word": [
+						{
+							"words": "steam"
+						},
+						{
+							"words": "steaming"
+						}
+					]
+				},
+				{
+					"writtenText": "your flavors are out of this world!",
+					"word": [
+						{
+							"words": "flavors"
+						},
+						{
+							"words": "flavoring"
+						},
+						{
+							"words": "flavour"
+						},
+						{
+							"words": "flavouring"
+						}
+					]
+				},
+				{
+					"writtenText": "your skill with your utensils!",
+					"word": [
+						{
+							"words": "utensil"
+						},
+						{
+							"words": "utensils"
+						}
+					]
+				},
+				{
+					"writtenText": "how you operate the oven!",
+					"word": [
+						{
+							"words": "oven"
+						},
+						{
+							"words": "ovens"
+						}
+					]
+				},
+				{
+					"writtenText": "how you use your tongs!",
+					"word": [
+						{
+							"words": "tong"
+						},
+						{
+							"words": "tongs"
+						}
+					]
+				},
+				{
+					"writtenText": "how you puree a good uhh puree!",
+					"word": [
+						{
+							"words": "puree"
+						}
+					]
+				},
+				{
+					"writtenText": "how you grate some mean onions!",
+					"word": [
+						{
+							"words": "grate"
+						},
+						{
+							"words": "grating"
+						}
+					]
+				},
+				{
+					"writtenText": "your taste is phenomenal!",
+					"word": [
+						{
+							"words": "taste"
+						},
+						{
+							"words": "tasty"
+						},
+						{
+							"words": "tasting"
+						}
+					]
+				},
+				{
+					"writtenText": "how you utilise perfect ingredients!",
+					"word": [
+						{
+							"words": "ingredient"
+						},
+						{
+							"words": "ingredients"
+						}
+					]
+				},
+				{
+					"writtenText": "your unparalled skill in whisking!",
+					"word": [
+						{
+							"words": "whisk"
+						},
+						{
+							"words": "whisking"
+						}
+					]
+				},
+				{
+					"writtenText": "your knife skills!",
+					"word": [
+						{
+							"words": "knife"
+						},
+						{
+							"words": "knives"
+						},
+						{
+							"words": "cleaver"
+						}
+					]
+				},
+				{
+					"writtenText": "how you make a great salad bowl!",
+					"word": [
+						{
+							"words": "salad"
+						},
+						{
+							"words": "salads"
+						},
+						{
+							"words": "leafy greens"
+						},
+						{
+							"words": "bowl"
+						},
+						{
+							"words": "bowls"
+						}
+					]
+				},
+				{
+					"writtenText": "how you can come up with creative recipes!",
+					"word": [
+						{
+							"words": "recipe"
+						},
+						{
+							"words": "recipes"
+						},
+						{
+							"words": "recipe book"
+						},
+						{
+							"words": "cook book"
+						}
+					]
+				},
+				{
+					"writtenText": "how your lemons are so zesty!",
+					"word": [
+						{
+							"words": "zest"
+						},
+						{
+							"words": "zesty"
+						}
+					]
+				},
+				{
+					"writtenText": "how you brine!",
+					"word": [
+						{
+							"words": "brine"
+						},
+						{
+							"words": "brining"
+						}
+					]
+				},
+				{
+					"writtenText": "how your stove looks so clean!",
+					"word": [
+						{
+							"words": "stove"
+						},
+						{
+							"words": "stovetop"
+						}
+					]
+				},
+				{
+					"writtenText": "how your microwaved food still tastes really good!",
+					"word": [
+						{
+							"words": "microwave"
+						},
+						{
+							"words": "microwaving"
+						}
+					]
+				},
+				{
+					"writtenText": "your sieving skills!",
+					"word": [
+						{
+							"words": "sieve"
+						},
+						{
+							"words": "sieving"
+						}
+					]
+				}
+			],
+			"separators": [],
+			"props": {}
+		},
+		{
+			"name": "chef@word",
+			"props": {
+				"hide": true
+			},
+			"separators": [],
+			"lines": [],
+			"columns": [
+				{
+					"typeStr": "1",
+					"name": "words",
+					"display": null
+				}
+			]
+		},
+		{
+			"name": "other",
+			"columns": [
+				{
+					"typeStr": "1",
+					"name": "ability",
+					"display": null
+				},
+				{
+					"typeStr": "1",
+					"name": "description",
+					"display": null
+				}
+			],
+			"lines": [
+				{
+					"ability": "plumber",
+					"description": "[center]The plumber is feeling quite down today, as he suddenly didnt feel confident after seeing his friends doing cooler white collar jobs. Show your appreciation for him by writing a card about complimenting his plumbing ability!"
+				},
+				{
+					"ability": "chef",
+					"description": "[center]The chef doesn't feel very confident about his cooking skills today as he felt that he wasn't performing as well. Help him out by writing a card complimenting his cooking ability!"
+				}
+			],
+			"separators": [],
+			"props": {}
+		}
+	],
+	"customTypes": [],
+	"compress": false
+}

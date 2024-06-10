@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpcpkmydgeqfn"]
+
+[ext_resource type="Script" path="res://scenes/CountDown.gd" id="1_ia64e"]
+[ext_resource type="FontFile" uid="uid://drpqbxo0lqgrc" path="res://assets/font/LapsusPro-Bold.otf" id="2_fnyj4"]
+
+[node name="CountDown" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ia64e")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+
+[node name="TimerLabel" type="RichTextLabel" parent="."]
+offset_right = 500.0
+offset_bottom = 35.0
+theme_override_fonts/normal_font = ExtResource("2_fnyj4")
+theme_override_font_sizes/normal_font_size = 32
+text = "Time: "

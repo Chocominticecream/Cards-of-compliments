@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2mtpmbp3i0bs"]
+
+[sub_resource type="Curve" id="Curve_ch2q7"]
+_data = [Vector2(0.00561798, 0.131868), 0.0, 0.0, 0, 0, Vector2(0.988764, 0.252747), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Confetti" type="Node2D"]
+
+[node name="yellow" type="CPUParticles2D" parent="."]
+amount = 60
+explosiveness = 0.6
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -1)
+gravity = Vector2(0, 100)
+initial_velocity_min = 236.72
+initial_velocity_max = 337.73
+angular_velocity_min = 280.0
+angular_velocity_max = 280.0
+linear_accel_min = 12.0
+linear_accel_max = 12.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_ch2q7")
+color = Color(0.992157, 1, 0.415686, 1)
+
+[node name="blue" type="CPUParticles2D" parent="."]
+amount = 60
+explosiveness = 0.6
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -1)
+gravity = Vector2(0, 100)
+initial_velocity_min = 236.72
+initial_velocity_max = 337.73
+angular_velocity_min = 280.0
+angular_velocity_max = 280.0
+linear_accel_min = 12.0
+linear_accel_max = 12.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_ch2q7")
+color = Color(0.160784, 0.803922, 1, 1)
+
+[node name="red" type="CPUParticles2D" parent="."]
+amount = 60
+explosiveness = 0.6
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -1)
+gravity = Vector2(0, 100)
+initial_velocity_min = 236.72
+initial_velocity_max = 337.73
+angular_velocity_min = 280.0
+angular_velocity_max = 280.0
+linear_accel_min = 12.0
+linear_accel_max = 12.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_ch2q7")
+color = Color(1, 0.443137, 0.552941, 1)

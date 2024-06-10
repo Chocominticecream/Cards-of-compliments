@@ -1,0 +1,104 @@
+[gd_scene load_steps=10 format=3 uid="uid://btj16b2p3umlc"]
+
+[ext_resource type="Script" path="res://scenes/SelectCard.gd" id="1_bm2cj"]
+[ext_resource type="Texture2D" uid="uid://dih16tuq0claq" path="res://assets/graphics/Wood Texture 1.png" id="2_5lrte"]
+[ext_resource type="FontFile" uid="uid://drpqbxo0lqgrc" path="res://assets/font/LapsusPro-Bold.otf" id="3_1kuv4"]
+[ext_resource type="Texture2D" uid="uid://do2s6v82t7ano" path="res://assets/graphics/buttonLong_beige.png" id="4_e3mga"]
+[ext_resource type="PackedScene" uid="uid://01sbj6mqo5bu" path="res://scenes/greeting_card_button.tscn" id="5_6nmkq"]
+[ext_resource type="Script" path="res://scenes/CardSelectGroup.gd" id="5_qv8j1"]
+[ext_resource type="Texture2D" uid="uid://8xm81ys1j4tk" path="res://assets/graphics/greetingcardicon1.png" id="7_s7yu2"]
+[ext_resource type="Texture2D" uid="uid://cbguje6bu0qkf" path="res://assets/graphics/greetingcardicon2.png" id="8_mchi8"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_74hv0"]
+
+[node name="SelectCard" type="Node2D"]
+script = ExtResource("1_bm2cj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 0.756863, 0.54902, 0.992157)
+custom_minimum_size = Vector2(960, 580)
+offset_left = 1.0
+offset_top = -19.0
+offset_right = 961.0
+offset_bottom = 561.0
+texture = SubResource("CanvasTexture_74hv0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(502, 514)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_5lrte")
+
+[node name="DescriptionGroup" type="Node2D" parent="."]
+
+[node name="description" type="RichTextLabel" parent="DescriptionGroup"]
+offset_top = 134.0
+offset_right = 960.0
+offset_bottom = 374.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_1kuv4")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]The plumber is feeling quite down today, as he suddenly didnt feel confident after seeing his friends doing cooler white collar jobs.
+Show your appreciation for him by writing a card about complimenting his plumbing ability!"
+
+[node name="TextureButton" type="TextureButton" parent="DescriptionGroup"]
+offset_left = 385.0
+offset_top = 460.0
+offset_right = 575.0
+offset_bottom = 509.0
+texture_normal = ExtResource("4_e3mga")
+ignore_texture_size = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DescriptionGroup/TextureButton"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 190.0
+offset_bottom = 45.0
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.345098, 0.223529, 0.14902, 1)
+theme_override_fonts/normal_font = ExtResource("3_1kuv4")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Next!"
+
+[node name="CardSelectGroup" type="Node2D" parent="."]
+visible = false
+script = ExtResource("5_qv8j1")
+
+[node name="SelectingCards" type="Node2D" parent="CardSelectGroup"]
+
+[node name="GreetingCardButton" parent="CardSelectGroup/SelectingCards" instance=ExtResource("5_6nmkq")]
+offset_left = 210.0
+offset_top = 177.0
+offset_right = 377.0
+offset_bottom = 362.0
+scale = Vector2(1, 1)
+texture_normal = ExtResource("7_s7yu2")
+
+[node name="GreetingCardButton2" parent="CardSelectGroup/SelectingCards" instance=ExtResource("5_6nmkq")]
+offset_left = 549.0
+offset_top = 177.0
+offset_right = 716.0
+offset_bottom = 362.0
+scale = Vector2(1, 1)
+texture_normal = ExtResource("8_mchi8")
+
+[node name="description" type="RichTextLabel" parent="CardSelectGroup"]
+offset_left = 2.0
+offset_top = 36.0
+offset_right = 962.0
+offset_bottom = 136.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_1kuv4")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center]Select a card to write in!"
+
+[connection signal="pressed" from="DescriptionGroup/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CardSelectGroup/SelectingCards/GreetingCardButton" to="." method="_on_greeting_card_button_pressed"]
+[connection signal="pressed" from="CardSelectGroup/SelectingCards/GreetingCardButton2" to="." method="_on_greeting_card_button_2_pressed"]

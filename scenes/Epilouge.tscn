@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://boxy5tn8wcobc"]
+
+[ext_resource type="Script" path="res://scenes/Epilouge.gd" id="1_ab6eb"]
+[ext_resource type="Texture2D" uid="uid://dih16tuq0claq" path="res://assets/graphics/Wood Texture 1.png" id="1_w2gb2"]
+[ext_resource type="FontFile" uid="uid://drpqbxo0lqgrc" path="res://assets/font/LapsusPro-Bold.otf" id="2_bxa41"]
+[ext_resource type="Texture2D" uid="uid://do2s6v82t7ano" path="res://assets/graphics/buttonLong_beige.png" id="3_80yg4"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_hekwa"]
+
+[node name="Epilouge" type="Node2D"]
+script = ExtResource("1_ab6eb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 0.756863, 0.54902, 0.992157)
+custom_minimum_size = Vector2(1000, 540)
+offset_left = -14.0
+offset_right = 986.0
+offset_bottom = 540.0
+texture = SubResource("CanvasTexture_hekwa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(502, 514)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_w2gb2")
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 1.0
+offset_top = 138.0
+offset_right = 1001.0
+offset_bottom = 238.0
+pivot_offset = Vector2(500, 40)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("2_bxa41")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Your Score:"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 406.0
+offset_top = 466.0
+offset_right = 596.0
+offset_bottom = 515.0
+texture_normal = ExtResource("3_80yg4")
+ignore_texture_size = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 190.0
+offset_bottom = 45.0
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.345098, 0.223529, 0.14902, 1)
+theme_override_fonts/normal_font = ExtResource("2_bxa41")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Next!"
+
+[node name="Score" type="RichTextLabel" parent="."]
+offset_left = -8.0
+offset_top = 202.0
+offset_right = 992.0
+offset_bottom = 272.0
+pivot_offset = Vector2(500, 40)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("2_bxa41")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center]0/0 words found!"
+
+[node name="ResultsBlurb" type="RichTextLabel" parent="."]
+offset_left = 9.0
+offset_top = 284.0
+offset_right = 949.0
+offset_bottom = 434.0
+pivot_offset = Vector2(500, 40)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("2_bxa41")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]bla bla bla"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

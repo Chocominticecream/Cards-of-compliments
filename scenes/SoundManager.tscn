@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://tt8edbjfti1p"]
+
+[ext_resource type="Script" path="res://scenes/SoundManager.gd" id="1_fgxcq"]
+[ext_resource type="AudioStream" uid="uid://beelv6vidookc" path="res://assets/audio/+v¦¦(Daystar)-Cozy Cafe-[AudioTrimmer.com].mp3" id="1_hbqgt"]
+
+[node name="SoundManager" type="AudioStreamPlayer"]
+stream = ExtResource("1_hbqgt")
+volume_db = -10.0
+script = ExtResource("1_fgxcq")

@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://bmr66jxbhq14"]
+
+[ext_resource type="FontFile" uid="uid://drpqbxo0lqgrc" path="res://assets/font/LapsusPro-Bold.otf" id="1_ugorv"]
+[ext_resource type="Script" path="res://scenes/title_screen_group.gd" id="1_y1j03"]
+[ext_resource type="Texture2D" uid="uid://do2s6v82t7ano" path="res://assets/graphics/buttonLong_beige.png" id="2_sx02c"]
+[ext_resource type="Texture2D" uid="uid://dih16tuq0claq" path="res://assets/graphics/Wood Texture 1.png" id="2_u7q0p"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_q32j8"]
+
+[sub_resource type="Animation" id="Animation_yur85"]
+resource_name = "shrinkLoop"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.9, 0.9), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3gmae"]
+_data = {
+"shrinkLoop": SubResource("Animation_yur85")
+}
+
+[node name="TitleScreenGroup" type="Node2D"]
+script = ExtResource("1_y1j03")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 0.756863, 0.54902, 0.992157)
+custom_minimum_size = Vector2(960, 560)
+offset_left = 1.0
+offset_top = -8.0
+offset_right = 961.0
+offset_bottom = 552.0
+texture = SubResource("CanvasTexture_q32j8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(502, 514)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_u7q0p")
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_top = 180.0
+offset_right = 1000.0
+offset_bottom = 260.0
+pivot_offset = Vector2(500, 40)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_ugorv")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center]Cards of compliments!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Title"]
+libraries = {
+"": SubResource("AnimationLibrary_3gmae")
+}
+autoplay = "shrinkLoop"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 404.0
+offset_top = 309.0
+offset_right = 594.0
+offset_bottom = 358.0
+texture_normal = ExtResource("2_sx02c")
+ignore_texture_size = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 190.0
+offset_bottom = 45.0
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.345098, 0.223529, 0.14902, 1)
+theme_override_fonts/normal_font = ExtResource("1_ugorv")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Start!"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

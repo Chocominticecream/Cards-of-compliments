@@ -1,0 +1,95 @@
+[gd_scene load_steps=17 format=3 uid="uid://c6ao7scgmwrln"]
+
+[ext_resource type="Script" path="res://scenes/greetingCard.gd" id="1_xbnkr"]
+[ext_resource type="FontFile" uid="uid://drpqbxo0lqgrc" path="res://assets/font/LapsusPro-Bold.otf" id="2_blm1e"]
+[ext_resource type="Texture2D" uid="uid://cgml4o6ud078i" path="res://assets/graphics/greetingcard1.png" id="3_32q33"]
+[ext_resource type="FontFile" uid="uid://blh36pynxd51t" path="res://assets/font/GamjaFlower-Regular.ttf" id="3_fpg7a"]
+[ext_resource type="Texture2D" uid="uid://b0h1vhps53ge6" path="res://assets/graphics/openCard1.png" id="3_mm4yq"]
+[ext_resource type="AudioStream" uid="uid://bb141ajruix2j" path="res://assets/audio/454707__qubodup__page-flip.wav" id="5_dfscc"]
+[ext_resource type="AudioStream" uid="uid://dletxumc66b8y" path="res://assets/audio/435608__theknave__taking-bill-from-stack-5.wav" id="6_xqqf1"]
+[ext_resource type="AudioStream" uid="uid://dupw01vygt3d" path="res://assets/audio/257518__waldram__scribble_short.wav" id="7_csytw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3l58v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_00qpl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yi8rr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ahipb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xyq2c"]
+
+[sub_resource type="Theme" id="Theme_ms8ri"]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_3l58v")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_00qpl")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_yi8rr")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_ahipb")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_xyq2c")
+
+[sub_resource type="Animation" id="Animation_jtyfc"]
+resource_name = "open"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fo623"]
+_data = {
+"open": SubResource("Animation_jtyfc")
+}
+
+[node name="GreetingCard" type="Node2D"]
+position = Vector2(288, -632)
+script = ExtResource("1_xbnkr")
+
+[node name="Open" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Open"]
+position = Vector2(-384, 0)
+texture = ExtResource("3_mm4yq")
+centered = false
+
+[node name="Greeting" type="RichTextLabel" parent="Open"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 364.0
+offset_bottom = 412.0
+theme = SubResource("Theme_ms8ri")
+theme_override_fonts/normal_font = ExtResource("3_fpg7a")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Dear Client,
+I think you are pretty cool! I like"
+scroll_following = true
+
+[node name="Closed" type="Node2D" parent="."]
+
+[node name="CardTitle" type="RichTextLabel" parent="Closed"]
+offset_left = 72.0
+offset_top = 176.0
+offset_right = 312.0
+offset_bottom = 256.0
+pivot_offset = Vector2(120, 0)
+theme_override_fonts/normal_font = ExtResource("2_blm1e")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center]Title"
+scroll_active = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Closed"]
+texture = ExtResource("3_32q33")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fo623")
+}
+
+[node name="CardOpen" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dfscc")
+volume_db = 15.0
+
+[node name="CardSlide" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_xqqf1")
+volume_db = 15.0
+
+[node name="CardWrite" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_csytw")
+volume_db = 10.0

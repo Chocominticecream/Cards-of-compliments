@@ -1,0 +1,317 @@
+[gd_scene load_steps=19 format=3 uid="uid://bvvebmvck7l7r"]
+
+[ext_resource type="Script" path="res://scenes/writing_table.gd" id="1_eu8qe"]
+[ext_resource type="FontFile" uid="uid://drpqbxo0lqgrc" path="res://assets/font/LapsusPro-Bold.otf" id="1_h1k6x"]
+[ext_resource type="Texture2D" uid="uid://dih16tuq0claq" path="res://assets/graphics/Wood Texture 1.png" id="1_wsa2p"]
+[ext_resource type="Script" path="res://scenes/GuessBox.gd" id="2_0fomg"]
+[ext_resource type="PackedScene" uid="uid://c6ao7scgmwrln" path="res://scenes/greetingCard.tscn" id="3_xnmk3"]
+[ext_resource type="Script" path="res://scenes/spawnBlurb.gd" id="5_ao20e"]
+[ext_resource type="Texture2D" uid="uid://brh3htmjm8toc" path="res://assets/graphics/buttonRound_beige.png" id="6_n4yuf"]
+[ext_resource type="PackedScene" uid="uid://dpcpkmydgeqfn" path="res://scenes/Timer.tscn" id="7_acyiq"]
+[ext_resource type="Script" path="res://scenes/FoundWords.gd" id="8_ox2ve"]
+[ext_resource type="PackedScene" uid="uid://fad30sf1uyqn" path="res://scenes/WinScreen.tscn" id="9_bt46d"]
+[ext_resource type="Texture2D" uid="uid://do2s6v82t7ano" path="res://assets/graphics/buttonLong_beige.png" id="10_f0wtc"]
+[ext_resource type="Script" path="res://scenes/Ability.gd" id="10_ikmx6"]
+[ext_resource type="Script" path="res://scenes/tutorialInterface.gd" id="13_yh5fb"]
+[ext_resource type="Texture2D" uid="uid://p1uvfd63jk4m" path="res://assets/graphics/arrowRight.png" id="14_6hb06"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_cmvej"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_eb52h"]
+
+[sub_resource type="Animation" id="Animation_w0as6"]
+resource_name = "moving arrow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("arrow:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(20, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rchc4"]
+_data = {
+"moving arrow": SubResource("Animation_w0as6")
+}
+
+[node name="WritingTable" type="Node2D"]
+script = ExtResource("1_eu8qe")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.952941, 0.737255, 0.54902, 1)
+custom_minimum_size = Vector2(960, 540)
+offset_left = -1.0
+offset_right = 959.0
+offset_bottom = 540.0
+texture = SubResource("CanvasTexture_cmvej")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(502, 514)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_wsa2p")
+
+[node name="GreetingCard" parent="." instance=ExtResource("3_xnmk3")]
+
+[node name="GuessBox" type="LineEdit" parent="."]
+visible = false
+offset_left = 375.0
+offset_top = 475.0
+offset_right = 584.0
+offset_bottom = 523.0
+theme_override_fonts/font = ExtResource("1_h1k6x")
+theme_override_font_sizes/font_size = 32
+script = ExtResource("2_0fomg")
+
+[node name="enter" type="TextureButton" parent="GuessBox"]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 4.0
+offset_right = 272.0
+offset_bottom = 44.0
+texture_normal = ExtResource("6_n4yuf")
+
+[node name="Clue" type="TextureButton" parent="GuessBox"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 1.0
+offset_right = 528.0
+offset_bottom = 50.0
+texture_normal = ExtResource("10_f0wtc")
+ignore_texture_size = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GuessBox/Clue"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 190.0
+offset_bottom = 45.0
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.345098, 0.223529, 0.14902, 1)
+theme_override_fonts/normal_font = ExtResource("1_h1k6x")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Clue!"
+
+[node name="spawnBlurb" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 375.0
+offset_top = 475.0
+offset_right = 375.0
+offset_bottom = 475.0
+script = ExtResource("5_ao20e")
+
+[node name="CountDown" parent="." instance=ExtResource("7_acyiq")]
+visible = false
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="TimerLabel" parent="CountDown" index="1"]
+layout_mode = 0
+
+[node name="FoundWords" type="RichTextLabel" parent="."]
+visible = false
+offset_top = 505.0
+offset_right = 500.0
+offset_bottom = 540.0
+theme_override_fonts/normal_font = ExtResource("1_h1k6x")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Words Found: 0/0"
+script = ExtResource("8_ox2ve")
+
+[node name="WinScreen" parent="." instance=ExtResource("9_bt46d")]
+
+[node name="Ability" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 460.0
+offset_top = 3.0
+offset_right = 960.0
+offset_bottom = 38.0
+theme_override_fonts/normal_font = ExtResource("1_h1k6x")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[right]Ability:nil"
+script = ExtResource("10_ikmx6")
+
+[node name="SendCard" type="TextureButton" parent="."]
+visible = false
+offset_left = 380.0
+offset_top = 10.0
+offset_right = 570.0
+offset_bottom = 59.0
+texture_normal = ExtResource("10_f0wtc")
+ignore_texture_size = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SendCard"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 190.0
+offset_bottom = 45.0
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.345098, 0.223529, 0.14902, 1)
+theme_override_fonts/normal_font = ExtResource("1_h1k6x")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Send my card!"
+
+[node name="tutorialInterface" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("13_yh5fb")
+
+[node name="TextureRect2" type="TextureRect" parent="tutorialInterface"]
+modulate = Color(0.231373, 0.231373, 0.231373, 0.486275)
+offset_right = 960.0
+offset_bottom = 540.0
+texture = SubResource("CanvasTexture_eb52h")
+
+[node name="tutorial" type="Node2D" parent="tutorialInterface"]
+
+[node name="step1" type="Node2D" parent="tutorialInterface/tutorial"]
+visible = false
+
+[node name="description" type="RichTextLabel" parent="tutorialInterface/tutorial/step1"]
+offset_top = 134.0
+offset_right = 960.0
+offset_bottom = 374.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("1_h1k6x")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Welcome to card of compliments! A game where you write words related to an ability in order to write up compliments into a greeting card!"
+
+[node name="step2" type="Node2D" parent="tutorialInterface/tutorial"]
+visible = false
+
+[node name="description" type="RichTextLabel" parent="tutorialInterface/tutorial/step2"]
+offset_top = 134.0
+offset_right = 960.0
+offset_bottom = 434.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("1_h1k6x")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]This box over here is where you write words related to an ability of the person you are writing to! (eg. writing to a grocer means you will write \"vegetables\" in this box)
+
+Press the button beside it or click space or enter to write the resulting sentence from that word!
+
+You can also try for clues using the clue button!"
+
+[node name="movingArrow" type="Node2D" parent="tutorialInterface/tutorial/step2"]
+position = Vector2(478, 430)
+rotation = 1.5708
+
+[node name="arrow" type="Sprite2D" parent="tutorialInterface/tutorial/step2/movingArrow"]
+position = Vector2(18.4128, 0)
+texture = ExtResource("14_6hb06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorialInterface/tutorial/step2/movingArrow"]
+libraries = {
+"": SubResource("AnimationLibrary_rchc4")
+}
+autoplay = "moving arrow"
+
+[node name="step3" type="Node2D" parent="tutorialInterface/tutorial"]
+visible = false
+
+[node name="description" type="RichTextLabel" parent="tutorialInterface/tutorial/step3"]
+offset_top = 134.0
+offset_right = 960.0
+offset_bottom = 374.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("1_h1k6x")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]The person's ability is stated here! "
+
+[node name="movingArrow" type="Node2D" parent="tutorialInterface/tutorial/step3"]
+position = Vector2(905, 67)
+rotation = -1.5708
+
+[node name="arrow" type="Sprite2D" parent="tutorialInterface/tutorial/step3/movingArrow"]
+position = Vector2(12.0042, 0)
+texture = ExtResource("14_6hb06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorialInterface/tutorial/step3/movingArrow"]
+libraries = {
+"": SubResource("AnimationLibrary_rchc4")
+}
+autoplay = "moving arrow"
+
+[node name="step4" type="Node2D" parent="tutorialInterface/tutorial"]
+visible = false
+
+[node name="description" type="RichTextLabel" parent="tutorialInterface/tutorial/step4"]
+offset_top = 134.0
+offset_right = 960.0
+offset_bottom = 374.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("1_h1k6x")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Here you can see the amount of words that you can find for this person's ability, try to find as many as you can!"
+
+[node name="movingArrow" type="Node2D" parent="tutorialInterface/tutorial/step4"]
+position = Vector2(111, 447)
+rotation = 1.5708
+
+[node name="arrow" type="Sprite2D" parent="tutorialInterface/tutorial/step4/movingArrow"]
+position = Vector2(19.458, 0)
+texture = ExtResource("14_6hb06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorialInterface/tutorial/step4/movingArrow"]
+libraries = {
+"": SubResource("AnimationLibrary_rchc4")
+}
+autoplay = "moving arrow"
+
+[node name="step5" type="Node2D" parent="tutorialInterface/tutorial"]
+visible = false
+
+[node name="description" type="RichTextLabel" parent="tutorialInterface/tutorial/step5"]
+offset_top = 134.0
+offset_right = 960.0
+offset_bottom = 374.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("1_h1k6x")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Once you are done, you can click on the \"send my card\" button to finish sending your card! Don't worry about finding all the words! You can submit a card regardless! Good luck!"
+
+[node name="movingArrow" type="Node2D" parent="tutorialInterface/tutorial/step5"]
+position = Vector2(482, 105)
+rotation = -1.5708
+
+[node name="arrow" type="Sprite2D" parent="tutorialInterface/tutorial/step5/movingArrow"]
+texture = ExtResource("14_6hb06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorialInterface/tutorial/step5/movingArrow"]
+libraries = {
+"": SubResource("AnimationLibrary_rchc4")
+}
+autoplay = "moving arrow"
+
+[connection signal="pressed" from="GuessBox/enter" to="GuessBox" method="_on_enter_pressed"]
+[connection signal="pressed" from="GuessBox/Clue" to="." method="_on_clue_pressed"]
+[connection signal="timeout" from="CountDown/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="SendCard" to="." method="_on_send_card_pressed"]
+
+[editable path="CountDown"]
