@@ -10,6 +10,7 @@ Screenshots:
 <img width="470" alt="jamshot2" src="https://github.com/Chocominticecream/Cards-of-compliments/assets/105193004/357413c7-68f0-456a-8f90-c0fdd173ffc8">
 
 Art:
+
 ![greetingcard1](https://github.com/Chocominticecream/Cards-of-compliments/assets/105193004/f54897e0-ff6b-4442-9384-5a1ae3eb0545)
 ![greetingcard2](https://github.com/Chocominticecream/Cards-of-compliments/assets/105193004/473dd5d2-7e31-41c6-9497-6839c3df6625)
 
