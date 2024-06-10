@@ -19,3 +19,8 @@ Felt that I could have done more art instead of coding, I mostly coded for a lot
 Overall though, its a good experience I suppose and it did prepare me better to do projects in crunch time.
 
 This game will also not be updated anymore unless I feel like it.
+
+<details> 
+        <summary>GeeksforGeeks</summary> 
+         A Computer Science Portal for Geeks 
+</details> 
