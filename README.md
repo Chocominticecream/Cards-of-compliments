@@ -4,6 +4,9 @@
  You can play the game over here:
 https://mintchocoicecream.itch.io/cards-of-compliments
 
+Submission page:
+https://itch.io/jam/mini-jame-gam-31/rate/2762633
+
 Screenshots:
 
 <img width="478" alt="jamshot1" src="https://github.com/Chocominticecream/Cards-of-compliments/assets/105193004/2018cb42-236b-4d39-9e91-625c0c8c0a2f">
